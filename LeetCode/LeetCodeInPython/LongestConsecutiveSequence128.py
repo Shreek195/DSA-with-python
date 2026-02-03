@@ -1,0 +1,24 @@
+from typing import List
+
+
+class Solution:
+    @staticmethod
+    def longest_consecutive(nums: List[int]) -> int:
+        num_set = set(nums)
+
+        longest = 0
+        for num in num_set:
+            if num - 1 not in num_set:
+                curr_num = num
+                curr_len = 1
+
+                while curr_num + 1 in num_set:
+                    curr_num += 1
+                    curr_len += 1
+                longest = max(longest, curr_len)
+
+        return longest
+
+
+Solution = Solution()
+print(Solution.longest_consecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]))

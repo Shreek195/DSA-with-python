@@ -1,0 +1,21 @@
+(a+b) % m = ((a x m) + (b % m)) % m
+(a-b) % m = ((a % m) - (b % m) + m) % m
+(a*b) % m = ((a % m) * (b % m)) % m
+(a/b) % m = ((a % m) * ((1/b) % m)) % m
+
+(1/b) % m => multiplicative modulo inverse (MMI)
+
+Ex.: 
+(6 * y) % 7 = 1
+y = MMI for 6 & y = 6
+
+so, (6 * 6) % 7 = 36 % 7 = 1
+
+
+(a % m) % m = a % m
+(m^x % m) = 0, FOR ALL x BELONGS TO +ve Integers
+
+Extra:
+If p is prime number, which is not a divisor of b, then (ab)^p-1 % p = a % p,
+due to Fremat's Little Theorem
+
